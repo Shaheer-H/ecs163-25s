@@ -1,0 +1,36 @@
+<!doctype html>
+<script src="https://unpkg.com/d3-sankey@0.12.3/dist/d3-sankey.min.js"></script>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Music and Mental Health Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="dashboard">
+        <h1>Music and Mental Health Analysis</h1>
+        
+        <div class="visualization" id="overview">
+            <h2>Mental Health by Music Genre</h2>
+            <div id="genre-chart"></div>
+        </div>
+        
+        <div class="focus-container">
+            <div class="visualization" id="focus1">
+                <h2>Distribution of Favorite Music Genres</h2>
+                <div id="scatter-plot"></div>
+            </div>
+            
+            <div class="visualization" id="focus2">
+                <h2>Music Genres and Depression Levels</h2>
+                <div id="parallel-plot"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

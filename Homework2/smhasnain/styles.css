@@ -1,0 +1,75 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* make all elements respect box sizing */
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+.dashboard {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    min-height: 100vh;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 40px;
+}
+
+.visualization {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+/* overview takes full width */
+#overview {
+    width: 100%;
+    height: 500px;
+}
+
+/* container for side-by-side visualizations */
+.focus-container {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+}
+
+/* each focus viz takes half width */
+#focus1, #focus2 {
+    flex: 1;
+    height: 500px;
+    min-width: 0; /* allow shrinking below content size */
+}
+
+/* chart containers inside visualizations */
+#genre-chart, #scatter-plot, #parallel-plot {
+    width: 100%;
+    height: calc(100% - 40px); /* accounting for the heading */
+}
+
+/* make svg elements responsive */
+svg {
+    max-width: 100%;
+    max-height: 120%;
+}
+
+/* responsive design for smaller screens */
+@media (max-width: 768px) {
+    .focus-container {
+        flex-direction: column;
+    }
+    
+    #focus1, #focus2 {
+        width: 100%;
+    }
+}
